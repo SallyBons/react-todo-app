@@ -1,0 +1,285 @@
+body {
+    font-family: "Arial", "Helvetica", sans-serif;
+}
+
+.app-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 900px;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+   background-image: url('https://cdn.dribbble.com/users/1544347/screenshots/4871968/taking-notes.svg.png');
+   background-size: 70%;
+   background-repeat: no-repeat;
+   background-position: 400px 200px;
+   background-attachment: fixedж
+}
+
+.todos-container {
+    max-width: 700px;
+}
+
+.app-title {
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.todo-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.todo-item {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    height: 100px;
+    background: white;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+.todo-item:hover{
+    border: 1px solid #1c69f7; 
+    box-shadow: 0px 5px 10px 0px #1c69f7; 
+}
+
+.todo-text {
+    word-break: break-all;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.delete-button {
+    visibility: hidden;
+    background: unset;
+    border: unset;
+    cursor: pointer;
+    background-color: lightgrey;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+.delete-icon {
+    font-size: 16px;
+    color: #737373;
+   
+}
+
+.todo-form {
+    margin: 10px;
+    flex-direction: column;
+    display: flex;
+}
+
+.new-task {
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    font-weight: initial;
+    padding-bottom: 5px;
+}
+
+.form-input {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    height: 100px;
+    font-size: 18px;
+}
+
+.add-btn {
+    width: 200px;
+    margin-top: 10px;
+    padding: 10px 30px 10px 30px;
+    float: right;
+    border: unset;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    background-color: #1c69f7;
+    font-weight: 600;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.add-btn:disabled {
+    cursor: not-allowed;
+}
+
+.tabs-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+
+.tab-default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    height: 60px;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
+    background-color: white;
+    position: relative;
+}
+
+.tab-default:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: lightgray;
+}
+
+.tab-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    height: 60px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    background-color: white;
+    position: relative;
+   
+}
+
+.tab-active:before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(20, 3, 248);
+}
+
+.task-completed {
+
+    text-decoration: line-through;
+    word-break: break-all;
+    padding: 15px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.todo-item:hover .important-button,
+.todo-item:hover .not-important-button,
+.todo-item:hover .delete-button {
+    visibility: visible;
+}
+
+
+.important-button {
+    visibility: hidden;
+    border: 1px solid;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 35px;
+    width: auto;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.important-button:before {
+    content: 'Mark important';
+    font-family: "Arial", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    font-size: 11.5px;
+}
+
+.not-important-button {
+    visibility: hidden;
+    border: 1px solid;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 35px;
+    width: auto;
+    background-color: lightgray;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.not-important-button:before {
+    content: 'not important';
+    font-family: "Arial", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    font-size: 11.5px;
+}
+
+.task-important {
+    font-weight: bold;
+    word-break: break-all;
+    padding: 15px;
+    padding-left: 40px;
+    color: rgba(0, 0, 0, 0.75);
+}
+.task-important:before{
+  content: '☆';
+  font-size: 30px; 
+  position: absolute;
+  top:8px;
+  left:13px;
+
+}
+
+.buttons-wrapper {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-search-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 500px;
+}
+
+.logo {
+    height: 50px;
+    width: 150px;
+    margin-top: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.search-input {
+    width: 500px;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: rgba(231, 227, 227, 0.35);
+    padding: 5px 10px 5px 35px;
+    position: relative;
+    background-image: url('https://image.flaticon.com/icons/svg/54/54481.svg');
+    background-size: 6%;
+    background-repeat: no-repeat;
+    background-position: 8px 10px;
+}
+
+.search-input::placeholder {
+    opacity: 0.7;
+}
